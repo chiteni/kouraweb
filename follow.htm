@@ -1,0 +1,125 @@
+<html>
+    <style>
+        .googleMapStyle{
+            background: #FFFFFF; 
+            border: 1px solid #D9DDE2;  
+            border-radius: 2px; 
+            border-width: 1px; 
+            color: #36454E; 
+            font-family: 'Lato',sans-serif; 
+            font-size: 14px; 
+            padding: 10px; 
+            width: 400px;
+            height: 830px;
+            display: block;
+            background-image: url('images/googleMapBackgroundDesktopVersion.jpg');background-repeat: no-repeat;
+        }
+        @media (min-width: 1600px) {
+        .googleMapStyle{
+            background: #FFFFFF; 
+            border: 1px solid #D9DDE2;  
+            border-radius: 2px; 
+            border-width: 1px; 
+            color: #36454E; 
+            font-family: 'Lato',sans-serif; 
+            font-size: 14px; 
+            padding: 10px; 
+            width: 400px;
+            height: 770px;
+            display: block;
+            background-image: url('images/googleMapBackgroundDesktop.png');background-repeat: no-repeat;
+        }
+        
+    }
+    @media (max-width: 768px) {
+        .maxWidthOnDesktop {
+            width: none;
+        }
+        .googleMapStyle{
+            display: block;
+            background: #FFFFFF; 
+            border: 1px solid #D9DDE2;  
+            border-radius: 2px; 
+            border-width: 1px; 
+            color: #36454E; 
+            font-family: 'Lato',sans-serif; 
+            font-size: 14px; 
+            padding: 10px; 
+            width: 100%;
+            height: 240px;
+            background-image: url('images/googleMapBackground.jpg');background-repeat: no-repeat;
+        }
+    }
+    </style>
+    <body>
+
+        <script>
+            lLoaded = false;
+            function initAutocomplete() {
+                var today = new Date()
+                var curHr = today.getHours();
+                googleMapIsReady = true;
+                if (!lLoaded){
+                    lLoaded = true;
+                    requestAnimationFrame(function() {
+                        var lc = document.createElement('script'); 
+                        lc.type = 'text/javascript'; 
+                        lc.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDRwc2rzxze3xu9zUrqd5Kk5DaFKZU_QNE&callback=LoadMap&libraries=places&v=weekly';
+                        var s = document.getElementsByTagName('script')[0]; 
+                        s.parentNode.insertBefore(lc, s);
+                    });
+                }
+            
+            }
+            function startGoogleMap() {
+                var startMap = { lat: 42.3773759039077, lng: -71.24524054320742 };
+                if ((screen.width > 700) && (screen.width < 1400)){
+                    startMap = { lat: 42.2608014174772, lng: -71.80868881898476 };
+                }
+                else{
+                
+                }
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: 42.3773759039077, lng: -71.24524054320742 },
+                    zoom: 9,
+                    mapTypeControl: false
+                });
+
+                myMap = map;
+
+                const marker2 = new google.maps.Marker({ map, anchorPoint: new google.maps.Point(0, -29), });
+                const marker = new google.maps.Marker({ map, anchorPoint: new google.maps.Point(0, -29), });
+               // if (screen.width > 700)
+                //setTimeout( function(){offsetCenter(myMap.getCenter(),+300,+100)},100);
+            }
+            initAutocomplete()
+            function LoadMap(){
+            startGoogleMap();
+        }
+        </script>
+        <div>
+            <div id="map" class="googleMapStyle" style="width: 100%; background-size: cover;"></div>
+            <div id="contentInfo"></div>
+            <div id="mapContent" class="paddingLeftOnMobile" style="text-align: left; font-size: 14px; font-weight: bold; padding-top: 10px;"></div>
+        </div>
+        <script>
+            // JSON Object
+        fetch('http://eager-kepler.50-63-8-62.plesk.page/api/TrackMyPosition', {
+            method: 'GET',
+
+            headers: {
+                'Content-Type'  : 'application/json',
+            }
+        }).then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+            return Promise.reject(response);
+        }).then(function (data) {
+            console.log(data);
+        }).catch(function (error) {
+            console.warn('Something went wrong.', error);
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1472 @@
+/* Table of Contents
+----------------------------------
+
+0- Global CSS
+1- Heading CSS 
+2- Button CSS 
+3- Logo Area CSS
+4- Header Area CSS
+5- Home Area CSS
+6- About Area CSS
+7- Services Area CSS
+8- Projects Area CSS
+9- Pricing Area CSS
+10- Team Area CSS
+11- Testimonials Area CSS
+12- Counter Area CSS
+13- FAQs Area CSS
+14- Blog Area CSS 
+15- Contact Area CSS 
+16- Footer Area CSS
+17- Scroll-Top Area CSS
+
+*/
+
+
+
+/*--------------------- 0- Global CSS (Start) ---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --main-color: #54B435;
+    --secondary-color: #1C6758;   
+    --black: #000;
+    --white: #fff;
+    --grey: #666;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+*::selection{
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+html{
+    font-size: 62.6%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+   
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+body{
+    background: var(--white);
+}
+
+section{
+    padding: 2rem 5%;
+}
+
+.swiper-pagination-bullet{
+    height: 1rem;
+    width: 3rem;
+    border-radius : 50rem;
+    background: var(--main-color);
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+/*--------------------- 0- Global CSS (End) ---------------------*/
+
+
+
+/*--------------------- 1- Heading CSS (Start) ---------------------*/
+.heading{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading .content{
+    text-align: center;
+}
+
+.heading h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.heading h2{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.heading .design{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+}
+
+.heading .design span{
+    display: inline-block;    
+    background: var(--main-color);
+    width: 60%;
+    height: 0.15rem;
+}
+
+.heading .design img{
+    height: 3rem;
+    margin: 0 1rem;
+}
+
+/*--------------------- 1- Heading CSS (End) ---------------------*/
+
+
+
+/*--------------------- 2- Button CSS (Start) ---------------------*/
+.btn{
+    position: relative;
+    display: inline-block;
+    color: var(--white);
+    background: var(--secondary-color);
+    font-weight: 600;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+/*--------------------- 2- Button CSS (End) ---------------------*/
+
+
+
+/*--------------------- 3- Logo Area CSS (Start) ---------------------*/
+.logo{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    gap: 1rem;
+}
+        
+.logo img{
+    height: 5rem;
+    object-fit: cover;
+}
+
+.logo h3{
+    color:var(--black);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+}
+
+.logo p{
+    color:var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+/*--------------------- 3- Logo Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 4- Header Area CSS (Start) ---------------------*/
+.header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.header .navbar a{
+    display: inline-block;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--black)
+}
+
+.header .navbar a:hover,
+.header .navbar a.active{
+    color: var(--main-color);
+}
+
+.header #menu-btn{
+    font-size: 2.4rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+.header #menu-btn:hover{
+    color: var(--main-color);
+}
+
+/*--------------------- 4- Header Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 5- Home Area CSS (Start) ---------------------*/
+.home{
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.home-slider{
+    position: relative;
+}
+
+.home-slider .swiper-button-next,
+.home-slider .swiper-button-prev{
+    color: var(--white);
+    background-color: var(--secondary-color);
+    font-size: 1rem;
+    height: 5rem;
+    width: 5rem;
+    padding: 2rem;
+}
+
+.home-slider .swiper-button-next::after,
+.home-slider .swiper-button-prev::after {
+    font-size: 2rem;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.home-slider .swiper-button-next:hover,
+.home-slider .swiper-button-prev:hover {
+    background-color: var(--main-color);
+}
+
+.home-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+        
+.home-item .content{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+}
+
+.home-item .content .text{
+    width: 50rem;
+    background-color: var(--black);
+    margin-top: 15rem;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    text-align: left;
+    padding: 3rem;
+    -webkit-box-shadow: 2rem 2rem var(--main-color);
+            box-shadow: 2rem 2rem var(--main-color);
+}
+
+.home .content h5{
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.home .content h2{
+    line-height: 1.2;
+    font-size: 4.5rem;
+    color: var(--white);
+    text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.home .content p{
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 2rem 0;
+}
+
+/*--------------------- 5- Home Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 6- About Area CSS (End) ---------------------*/
+.about .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+    gap: 3rem;
+}
+
+.about .box-container .image{
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 50rem;
+        flex: 1 1 50rem;
+    height: 50rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -ms-grid-row-align: flex-end;
+    align-items: flex-end;
+}
+
+.about .sub-image-1{
+    height: 100%;
+    width: 80%;
+    position: relative;
+}
+
+.about .sub-image-2{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    bottom: 15%;
+    height: 70%;
+    width: 75%;
+    border: 1rem solid var(--white);
+}
+
+.about .box-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about .box-container .content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 35rem;
+        flex: 1 1 35rem;
+} 
+.about .box-container .content h2{
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+.about .box-container .content h3{
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+
+.about .box-container .content p{
+    color: var(--grey);
+    font-size: 1.6rem;
+    line-height: 1.9;
+    padding: 2rem 0;
+}
+.about .box-container .content ol{
+    color: var(--grey);
+    font-size: 1.6rem;
+    line-height: 1.9;
+    padding: 2rem 0;
+}
+/*--------------------- 6- About Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 7- Services Area CSS (Start) -------------------- */
+.services .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(33rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1rem;
+}
+
+.service-item{
+    position: relative;
+}
+
+.service-item .image{
+    height: 30rem;
+}
+
+.service-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.service-item .greencontent{
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    padding: 1.5rem;
+    background-color: #1c6758;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.service-item .content{
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.service-item h3{
+    font-size: 2.5rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.service-item p{
+    font-size: 1.4rem;
+    color: var(--white);
+    line-height: 1.7;
+    padding-bottom: 2rem;
+}
+
+/*--------------------- 7- Services Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 8- Projects Area CSS (Start) ---------------------*/
+.projects .controls{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style-type: none;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.projects .controls .button{
+    padding: 0.7rem 1rem;
+    font-size: 2rem;
+    color: var(--grey);
+    font-weight: 600;
+}
+
+.projects .controls .button:hover,
+.projects .controls .button.active{
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.projects .box-container{
+    columns: 3 30rem;
+    gap: 1rem;
+}
+
+.project-item{
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.project-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.project-item .content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    background-color: rgba(28, 103, 88, 0.8);
+}
+
+.project-item:hover .content{
+    opacity: 1;
+}
+
+.project-item .text{
+    scale: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
+.project-item:hover .text{
+    scale: 1;
+}
+
+.project-item a i{
+    scale: 0;
+    font-size: 4rem;
+    color: var(--white);
+    height: 5rem;
+    width: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+    padding-bottom: 2rem;
+}
+
+.project-item:hover a i{
+    scale: 1;
+}
+
+.project-item .text h4{
+    scale: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    color: var(--white);
+    padding-bottom: 0.5rem;
+}
+
+.project-item:hover .text h4{
+    scale: 1;
+}
+
+.project-item .content p{
+    scale: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.project-item:hover .content p{
+    scale: 1;
+}
+
+
+/*--------------------- 8- Projects Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 9- Pricing Area CSS (End) ---------------------*/
+.pricing .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(33rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 2rem;
+}
+  
+.pricing-item{
+    background-color: var(--white);
+    text-align: center;
+    border: var(--border);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.pricing-item .intro{
+    padding: 2rem 0;
+}
+
+.pricing-item.center .intro{
+    background-color: var(--secondary-color);
+}
+
+.pricing-item h3{
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+.pricing-item.center h3{
+    color: var(--white);
+}
+  
+.pricing-item .price{
+    color: var(--black);
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.pricing-item.center .price{
+    color: var(--white);
+}
+  
+.pricing-item p{
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.pricing-item.center p{
+    color: var(--white);
+}
+
+.pricing-item .content{
+    padding: 2rem 0;
+}
+
+.pricing-item.center .content{
+    background-color: var(--black);
+}
+  
+.pricing-item ul{
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    list-style: none;
+    padding-bottom: 3rem;
+}
+  
+.pricing-item ul li{
+    padding: 0.7rem 0;
+    font-size: 1.7rem;
+    color: var(--grey);
+}
+
+.pricing-item ul li i{
+    color: var(--secondary-color);
+    padding-right: 1rem;
+}
+
+.pricing-item.center ul li{
+    color: var(--white);
+}
+  
+.pricing-item .btn{
+    border-radius: 5rem;
+    overflow: hidden;
+}
+
+/*--------------------- 9- Pricing Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 10- Team Area CSS (Start) ---------------------*/
+.team .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.team-item{
+    background-color: var(--secondary-color);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.team-item .image{
+    position: relative;
+    height: 33rem;
+}
+
+.team-item .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.team-item .icon-container{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    gap: 0.5rem;
+}
+
+.team-item:hover .icon-container{
+    top: 0;
+}
+
+.team-item .icon-container a{
+    height: 4rem;
+    width: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    font-size: 2rem;
+    border: 0.1rem solid var(--white);
+    color: var(--white);
+}
+
+.team-item .icon-container a:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.team-item .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-item .content h2{
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.team-item .content h5{
+    color: var(--white);
+    font-size: 1.6rem;
+}
+
+/*--------------------- 10- Team Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 11- Testimonials Area CSS (Start) ---------------------*/
+.testimonial-slider{
+    position: relative;
+    padding-bottom: 5rem; 
+}
+
+.testi-item .content{
+    padding: 2rem;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    background-color: var(--secondary-color);
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.testi-item p{
+    font-size: 1.8rem;
+    line-height: 1.9;
+    color: var(--white);
+    font-style: italic;
+}
+
+.testi-item i{
+    color: var(--white);
+    font-size: 5rem;
+    padding-top: 2rem;
+}
+
+.testi-item .intro{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; 
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.testi-item .image{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.testi-item .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.testi-item .text h4{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 0.5rem;
+}
+
+.testi-item .text h6{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+/*--------------------- 11- Testimonials Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 12- Counter Area CSS (Start) ---------------------*/
+.counting{
+    width: 100%;
+    padding: 3rem 5%;
+    margin: 1rem 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/Counter/Counter.png);
+    background:         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/Counter/Counter.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.counting .box{
+    text-align: center;
+    padding: 2rem;
+    min-height: 15rem;
+}
+
+.counting .box .count{ 
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.counting .box h3{
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/*--------------------- 12- Counter Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 13- FAQs Area CSS (Start) ---------------------*/
+.faq .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.faq .accordion-container{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+        flex: 1 1 42rem;
+}
+
+.faq .accordion{
+    background: var(--white);
+    margin-bottom: 1rem;
+}
+
+.faq .accordion .accordion-heading{
+    padding: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.faq .accordion.active .accordion-heading{
+    background: var(--secondary-color);
+}
+
+.faq .accordion .accordion-heading h3{
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.faq .accordion.active .accordion-heading h3{
+    color: var(--white);
+}
+
+.faq .accordion .accordion-heading i{
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.faq .accordion.active .accordion-heading i{
+    color: var(--white);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.faq .accordioin-content{
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 2;
+    color: var(--grey);
+    display: none;
+}
+
+.faq .accordion.active .accordioin-content {
+    display: block;
+}
+
+.faq .image{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+        flex: 1 1 42rem;
+    height: 55rem;
+}
+
+.faq .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*--------------------- 13- FAQs Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 14- Blog Area CSS (Start) ---------------------*/
+.blogs .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(33rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1rem;
+}
+
+.blog-item{
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    background-color: var(--black);
+    position: relative;
+}
+
+.blog-item .image{
+    height: 30rem;
+}
+
+.blog-item .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+} 
+
+.blog-item .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-item .content .date{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.blog-item .content .main-heading{
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--white);
+    line-height: 1.4;
+    padding-bottom: 1rem;
+}
+
+.blog-item .content .main-heading:hover{
+    color: var(--main-color);
+}
+
+.blog-item .content p{
+    font-size: 1.6rem;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+/*--------------------- 14- Blog Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 15- Contact Area CSS (Start) ---------------------*/
+.contact{
+    padding: 2rem 0;
+}
+
+.contact iframe{
+    width: 100%;
+    height: 40rem;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.contact .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0rem 5%;
+    background-color: var(--white);
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+    margin-bottom: -10rem;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.contact-info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    background-color: rgba(28, 103, 88, 0.2);
+    padding: 4rem; 
+}
+
+.contact h3{
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info .info-item{
+    color: var(--secondary-color);
+    padding-bottom: 2.5rem;
+}
+
+.contact-info .info-item .intro{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.contact-info .info-item i{
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.contact-info .info-item h4{
+    font-size: 2.2rem;
+    color: var(--secondary-color); 
+}
+
+.contact-info .info-item .content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-info .info-item p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+.contact-info .gmail{
+    text-transform: none;
+}
+
+.contact-form{    
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    background: var(--secondary-color);
+    padding: 4rem; 
+}
+
+.contact-form h3{
+    color: var(--white);
+}
+
+.contact-form .box{
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    text-transform: none;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form .box::placeholder{
+    text-transform: capitalize;
+    color: var(--grey);
+}
+
+.contact-form textarea.box{
+    height: 15rem;
+    resize: none;
+}
+
+.contact-form .btn{
+    margin-top: 1rem;
+    border: 0.2rem solid var(--white);
+}
+
+.contact-form .alert{
+    font-size: 2rem;
+    color: var(--main-color);
+    padding-left: 1rem;
+}
+
+/*--------------------- 15- Contact Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 16- Footer Area CSS (Start) ---------------------*/
+.footer{
+    padding: 0rem 5%;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/Footer/Footer.png);
+    background:         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/Footer/Footer.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer .box-container{
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 25rem;
+        flex: 1 1 25rem;
+}
+
+.footer-item .logo{
+    padding-bottom: 2rem;
+}
+
+.footer-item .logo h3{
+    color: var(--white);
+}
+
+.footer-item .logo p{
+    color: var(--main-color);
+}
+
+.footer-item > p{
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.footer .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.footer .social a{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0.1rem solid var(--white);
+}
+
+.footer .social a:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.footer .social a i{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.footer-item h2{
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-item .links a{ 
+    display: block;
+    color: var(--white);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-item .links a:hover{
+    color: var(--main-color);
+}
+
+.footer-item .info-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -ms-grid-row-align: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.footer-item .info i{
+    font-size: 1.5rem;
+    color: var(--white);
+    padding-top: 0.4rem;
+}
+
+.footer-item .info p{
+    color: var(--white);
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+}
+
+.footer-item .info .gmail{
+    text-transform: none;
+}
+
+.footer .content{
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 0.1rem solid var(--white);
+}
+
+.footer .content p{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.footer .content p span{
+    color: var(--main-color);
+}
+
+/*--------------------- 16- Footer Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 17- Scroll-Top Area CSS (Start) ---------------------*/
+.scroll-top{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: var(--white);
+    background: var(--secondary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: 999;
+}
+
+.scroll-top:hover{
+    background: var(--main-color);
+}
+
+/*--------------------- 17- Scroll-Top Area CSS (End) ---------------------*/
